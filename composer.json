@@ -1,0 +1,15 @@
+{
+    "name": "flo/amazon",
+    "description": "Amazon API Package",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Flo Stone"
+        }
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"Flo\\Amazon\\": "Amazon/"
+    	}
+    }
+}
