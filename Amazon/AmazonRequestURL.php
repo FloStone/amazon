@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Amazon;
+namespace Flo\Amazon;
 
 class AmazonRequestURL
 {

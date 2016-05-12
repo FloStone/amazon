@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Services\Amazon;
+namespace Flo\Amazon;
 
-use Config;
 use SimpleXMLElement;
 
 class Amazon

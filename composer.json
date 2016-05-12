@@ -11,5 +11,8 @@
     	"psr-4": {
     		"Flo\\Amazon\\": "Amazon/"
     	}
+    },
+    "require": {
+        "Illuminate/Support": "5.2.*"
     }
 }
