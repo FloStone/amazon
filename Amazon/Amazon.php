@@ -113,13 +113,13 @@ class Amazon
 	 *
 	 * @return void
 	 */
-	public function __construct($region = self::US)
+	public function __construct($key, $associate, $secret, $region = self::US)
 	{
 		$this->validateCountry($region);
 		$this->country = $region;
-		$this->accesskey = Config::get('amazon.access_key');
-		$this->associateid = Config::get('amazon.associate_id');
-		$this->secretaccesskey = Config::get('amazon.secret_access_key');
+		$this->accesskey = $key;
+		$this->associateid = $associate;
+		$this->secretaccesskey = $secret;
 		$this->timestamp = date("Y-m-d\TH:i:s\Z");
 
 		$this->url = new AmazonRequestURL($this, $this->country_mapping[$region]);
