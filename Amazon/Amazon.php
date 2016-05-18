@@ -163,6 +163,18 @@ class Amazon
 	}
 
 	/**
+	 * Alias for addParam
+	 *
+	 * @param string $key
+	 * @param string $value
+	 * @return void
+	 */
+	public function param($key, $value)
+	{
+		$this->addParam($key, $value);
+	}
+
+	/**
 	 * Execute the request
 	 *
 	 * @return xml
