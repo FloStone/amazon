@@ -4,21 +4,14 @@ namespace Flo\Amazon;
 
 use SimpleXMLElement;
 
-class Amazon
+class Amazon implements AmazonCountry
 {
-	const US = 'us';
-	const DE = 'de';
-	const FR = 'fr';
-	const UK = 'uk';
-	const IT = 'it';
-	const ES = 'es';
-
 	/**
 	 * Allowed countries for API call
 	 *
 	 * @var array
 	 */
-	public static $countries = ['es', 'de', 'us', 'it', 'uk'];
+	public static $countries = ['us', 'de', 'fr', 'uk', 'it', 'es', 'br', 'ca', 'cn', 'in', 'jp', 'mx'];
 
 	/**
 	 * Countries mapped to domain
@@ -28,9 +21,16 @@ class Amazon
 	protected $country_mapping = [
 		'us' => 'com',
 		'de' => 'de',
-		'it' => 'it',
+		'fr' => 'fr',
 		'uk' => 'co.uk',
-		'es' => 'es'
+		'it' => 'it',
+		'es' => 'es',
+		'br' => 'com.br',
+		'ca' => 'ca',
+		'cn' => 'cn',
+		'in' => 'in',
+		'jp' => 'co.jp',
+		'mx' => 'com.mx'
 	];
 
 	/**
