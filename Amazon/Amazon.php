@@ -120,7 +120,7 @@ class Amazon
 		$this->accesskey = $key;
 		$this->associateid = $associate;
 		$this->secretaccesskey = $secret;
-		$this->timestamp = date("Y-m-d\TH:i:s\Z");
+		$this->timestamp = gmdate("Y-m-d\TH:i:s\Z", time());
 
 		$this->url = new AmazonRequestURL($this, $this->country_mapping[$region]);
 	}
