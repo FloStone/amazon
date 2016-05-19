@@ -187,7 +187,7 @@ class Amazon implements AmazonCountry
 
 			$firstrequest = $this->makeRequest();
 			$collection->push($firstrequest);
-			$maxpage = $firstrequest->maxpage();
+			$maxpage = isset($firstrequest->Items) ? $firstrequest->Items->TotalPages : 10;
 			$page = 2;
 
 			while($page <= $maxpage && $page < 11)
@@ -310,13 +310,15 @@ class Amazon implements AmazonCountry
 		if (isset($object->Error))
 			throw new AmazonRequestException($object);
 
-		$isvalid = (string)$object->Items->Request->IsValid;
-		$this->isValid = $isvalid == 'True' ? true : false;
+		if (isset($object->Items)):
+			$isvalid = (string)$object->Items->Request->IsValid;
+			$this->isValid = $isvalid == 'True' ? true : false;
 
-		if (!$this->isValid)
-		{
-			throw new AmazonRequestException($object->Items->Request->Errors);
-		}
+			if (!$this->isValid)
+			{
+				throw new AmazonRequestException($object->Items->Request->Errors);
+			}
+		endif;
 	}
 
 	/**
