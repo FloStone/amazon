@@ -1,6 +1,6 @@
 <?php
 
-namespace Flo\Amazon;
+namespace FloStone\Amazon;
 
 interface AmazonCountry
 {
