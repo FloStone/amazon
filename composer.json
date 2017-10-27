@@ -1,7 +1,7 @@
 {
-    "name": "flo5581/amazon",
+    "name": "flostone/amazon",
     "description": "Amazon API Package",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "authors": [
         {
             "name": "Flo Stone"
@@ -9,7 +9,7 @@
     ],
     "autoload": {
     	"psr-4": {
-    		"Flo\\Amazon\\": "Amazon/"
+    		"FloStone\\Amazon\\": "Amazon/"
     	}
     },
     "require": {
