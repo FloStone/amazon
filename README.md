@@ -1,11 +1,11 @@
 #Amazon Api Helper
 ## Installation
 Add this package to your composer.json or execute<br>
-`composer require flo5581/amazon`<br>
+`composer require flostone/amazon`<br>
 Include the Amazon Class using<br>
-`use Flo\Amazon\Amazon;`<br>
+`use FloStone\Amazon\Amazon;`<br>
 and<br>
-`use Flo\Amazon\AmazonCountry;`<br>
+`use FloStone\Amazon\AmazonCountry;`<br>
 for the available countries.
 ##Usage
 ###Amazon Credentials
